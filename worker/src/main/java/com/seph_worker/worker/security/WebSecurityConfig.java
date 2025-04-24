@@ -38,6 +38,7 @@ public class WebSecurityConfig {
 
                 .authorizeRequests()
                 .requestMatchers("factura/image/**").permitAll()
+                .requestMatchers("factura/searchImage").permitAll()
                 .requestMatchers(HttpMethod.POST, "/login").permitAll() // Permitir acceso a /login
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll() // Permitir OPTIONS para CORS
                 .requestMatchers("/*.*").permitAll() // Permitir el acceso a archivos estáticos

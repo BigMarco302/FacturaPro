@@ -36,8 +36,10 @@ public class FacturaController {
         return new WebServiceResponse(facturaService.getUrl(organizationId));
     }
 
-
-
+    @GetMapping("/searchImage")
+    public WebServiceResponse searchImage(@RequestParam("images") MultipartFile[] files){
+        return new WebServiceResponse(facturaService.getTextImage(files));
+    }
 
 
     //POST--------------------------------------->
